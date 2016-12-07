@@ -1,0 +1,8 @@
+Que entiende como "commit"
+El método que obtiene las nuevas partes de codigo, a la espera que sean aceptadas o no
+
+Que entiende como "Merge"
+Merge es combinar dos partes distintas de ramas diferentes para que dentro del codigo logren trabajar de manera conjunta
+
+Cual es la diferencia entre "Pull" y "Push"
+Con el comando Pull se puede quitar actualizaciones de codigo que se han hecho, mientras que Push realiza las actualizaciones de codigo, push prácticamente acepta el codigo que está en commit.
