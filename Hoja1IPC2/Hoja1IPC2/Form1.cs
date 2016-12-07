@@ -102,8 +102,33 @@ namespace Hoja1IPC2
 
         private void btnDesviacion_Click(object sender, EventArgs e)
         {
+            System.Globalization.CultureInfo ci = System.Globalization.CultureInfo.InstalledUICulture;
+            ni = (System.Globalization.NumberFormatInfo)ci.NumberFormat.Clone();
+            ni.NumberDecimalSeparator = ".";
+            n1 = Double.Parse(txt1.Text, ni);
+            n2 = Double.Parse(txt2.Text, ni);
+            n3 = Double.Parse(txt3.Text, ni);
+            n4 = Double.Parse(txt4.Text, ni);
+            n5 = Double.Parse(txt5.Text, ni);
+            n6 = Double.Parse(txt6.Text, ni);
+            numeros = new double[6];
+            numeros[0] = n1;
+            numeros[1] = n2;
+            numeros[2] = n3;
+            numeros[3] = n4;
+            numeros[4] = n5;
+            numeros[5] = n6;
+            sumatoria = n1 + n2 + n3 + n4 + n5 + n6;
+            double promedio = sumatoria / 6;
+            label12.Visible = true;
+            double sumaAlCuadrado = numeros.Sum(val => (val - promedio) * (val - promedio));
+            double desviacion = Math.Sqrt(sumaAlCuadrado / (numeros.Length - 1));
+            label13.Text = "Respuesta: " + desviacion;
+            label13.Visible = true;
         }
-    }
+
+    
+}
 
 
 }
