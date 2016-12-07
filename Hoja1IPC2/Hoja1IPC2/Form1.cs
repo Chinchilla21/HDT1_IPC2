@@ -94,7 +94,7 @@ namespace Hoja1IPC2
             }
             else
             {
-                label12.Text = "Respuesta: Moda= " + valorModal;
+                label12.Text = "Respuesta: Moda= " + valorModal+" #201513629";
                 label12.Visible = true;
             }
 
