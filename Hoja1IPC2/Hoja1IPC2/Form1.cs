@@ -56,6 +56,48 @@ namespace Hoja1IPC2
 
         private void btnModa_Click(object sender, EventArgs e)
         {
+            n1 = Convert.ToDouble(txt1.Text);
+            n2 = Convert.ToDouble(txt2.Text);
+            n3 = Convert.ToDouble(txt3.Text);
+            n4 = Convert.ToDouble(txt4.Text);
+            n5 = Convert.ToDouble(txt5.Text);
+            n6 = Convert.ToDouble(txt6.Text);
+            numeros = new double[6];
+            numeros[0] = n1;
+            numeros[1] = n2;
+            numeros[2] = n3;
+            numeros[3] = n4;
+            numeros[4] = n5;
+            numeros[5] = n6;
+            double valorModal = 0;
+            double existencia = 0;
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                int contador = 0;
+                for (int j = 0; j < numeros.Length; j++)
+                {
+                    if (numeros[j] == numeros[i])
+                    {
+                        contador++;
+                    }
+                }
+                if (contador > existencia)
+                {
+                    existencia = contador;
+                    valorModal = numeros[i];
+                }
+            }
+            if (existencia == 1)
+            {
+                label12.Text = "Respuesta: No hay moda";
+                label12.Visible = true;
+            }
+            else
+            {
+                label12.Text = "Respuesta: Moda= " + valorModal;
+                label12.Visible = true;
+            }
+
         }
 
         private void btnDesviacion_Click(object sender, EventArgs e)
