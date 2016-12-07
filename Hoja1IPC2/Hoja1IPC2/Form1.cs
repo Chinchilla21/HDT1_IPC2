@@ -28,7 +28,18 @@ namespace Hoja1IPC2
         double[] numeros;
         private void btnMedia_Click(object sender, EventArgs e)
         {
-            
+            Double media;
+            n1 = Convert.ToDouble(txt1.Text);
+            n2 = Convert.ToDouble(txt2.Text);
+            n3 = Convert.ToDouble(txt3.Text);
+            n4 = Convert.ToDouble(txt4.Text);
+            n5 = Convert.ToDouble(txt5.Text);
+            n6 = Convert.ToDouble(txt6.Text);
+            sumatoria = n1 + n2 + n3 + n4 + n5 + n6;
+            media = sumatoria / 6;
+            label10.Text = "Respuesta: " + media;
+            label10.Visible = true;
+
         }
 
         private void btnMediana_Click(object sender, EventArgs e)
