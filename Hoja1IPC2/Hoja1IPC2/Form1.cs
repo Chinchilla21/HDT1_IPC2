@@ -44,6 +44,14 @@ namespace Hoja1IPC2
 
         private void btnMediana_Click(object sender, EventArgs e)
         {
+            Double mediana;
+            n3 = Convert.ToDouble(txt3.Text);
+            n4 = Convert.ToDouble(txt4.Text);
+            sumatoria = n3 + n4;
+            mediana = sumatoria / 2;
+            label11.Text = "Respuesta: " + mediana;
+            label11.Visible = true;
+
         }
 
         private void btnModa_Click(object sender, EventArgs e)
